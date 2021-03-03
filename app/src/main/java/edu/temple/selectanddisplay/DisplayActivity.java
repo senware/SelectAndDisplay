@@ -22,12 +22,15 @@ public class DisplayActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Display");
 
+        // point to passed information
         Intent intent = getIntent();
 
+        // set the name label to the passed information
         TextView textView = findViewById(R.id.dinoNameLabel);
         textView.setTextSize(20);
         textView.setText(intent.getStringExtra("name"));
 
+        // set the image to the passed information
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(intent.getIntExtra("imageRes", 0));
     }
