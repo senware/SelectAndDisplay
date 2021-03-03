@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
@@ -41,14 +42,23 @@ public class SelectionActivity extends AppCompatActivity {
                 if (position == 0) {
                     return;
                 } else {
-
+                    Intent displayIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
+                    displayIntent.putExtra("name", dinoArrayList.get(position).getName());
+                    displayIntent.putExtra("imageRes", dinoArrayList.get(position).getImageRes());
+                    startActivity(displayIntent);
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                return;
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        spinner.setSelection(0);
     }
 }

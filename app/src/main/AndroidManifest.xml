@@ -11,8 +11,7 @@
         android:theme="@style/Theme.SelectAndDisplay">
         <activity
             android:name=".DisplayActivity"
-            android:label="@string/title_activity_display"
-            android:theme="@style/Theme.SelectAndDisplay.NoActionBar"></activity>
+            android:label="@string/title_activity_display" ></activity>
         <activity android:name=".SelectionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
