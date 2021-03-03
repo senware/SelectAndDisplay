@@ -13,7 +13,7 @@
             android:name=".DisplayActivity"
             android:label="@string/title_activity_display"
             android:theme="@style/Theme.SelectAndDisplay.NoActionBar"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".SelectionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
