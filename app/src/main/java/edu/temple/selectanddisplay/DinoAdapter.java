@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,21 +46,27 @@ public class DinoAdapter extends BaseAdapter {
     @Override
     // the non-dropdown view only displays the name
     public View getView(int position, View convertView, ViewGroup parent) {
+        FrameLayout frameLayout;
+        ImageView imageView;
         TextView textView;
 
         if (convertView == null) {
+            frameLayout = new FrameLayout(context);
+            imageView = new ImageView(context);
             textView = new TextView(context);
-
-            textView.setPadding(8, 16, 16, 16);
+            frameLayout.addView(imageView);
+            frameLayout.addView(textView);
             textView.setTextSize(20);
-
+            textView.setTextColor(0x000000);
+            imageView.getLayoutParams().height = 300;
+            imageView.getLayoutParams().width = 300;
         } else {
-            textView = (TextView) convertView;
+            imageView = (ImageView) convertView;
         }
 
-        textView.setText(items.get(position).getName());
+        imageView.setImageResource(items.get(position).getImageRes());
 
-        return textView;
+        return imageView;
     }
 
     @Override
