@@ -40,19 +40,14 @@ public class SelectionActivity extends AppCompatActivity {
         dinoGrid.setAdapter(dinoAdapter);
 
         // click behavior
-        dinoGrid.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        dinoGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // send information about selection to the display activity and launch it
                 Intent displayIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
                 displayIntent.putExtra("name", dinoArrayList.get(position).getName());
                 displayIntent.putExtra("imageRes", dinoArrayList.get(position).getImageRes());
                 startActivity(displayIntent);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                return;
             }
         });
     }
