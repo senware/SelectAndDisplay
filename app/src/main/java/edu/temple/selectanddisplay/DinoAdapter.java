@@ -62,7 +62,7 @@ public class DinoAdapter extends BaseAdapter {
             relativeLayout.addView(imageView);
             relativeLayout.addView(textView);
 
-            // put the text at the bottom
+            // layout params to put the text at the bottom
             RelativeLayout.LayoutParams textParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             textParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
 
@@ -80,7 +80,7 @@ public class DinoAdapter extends BaseAdapter {
         } else {
             relativeLayout = (RelativeLayout) convertView;
             imageView = (ImageView) relativeLayout.getChildAt(0);
-            textView = (TextView) relativeLayout.getChildAt((1));
+            textView = (TextView) relativeLayout.getChildAt(1);
         }
 
         imageView.setImageResource(items.get(position).getImageRes());
