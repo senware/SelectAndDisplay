@@ -3,6 +3,7 @@ package edu.temple.selectanddisplay;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
@@ -21,16 +22,19 @@ public class SelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-        getSupportActionBar().setTitle("Selection");
+        getSupportActionBar().setTitle(getString(R.string.selectionTitle));
+
+        Resources res = getResources();
+        String[] dinoNames = res.getStringArray(R.array.dino_string_list);
 
         // array of dinosaur objects
         ArrayList<Dino> dinoArrayList = new ArrayList<>();
-        dinoArrayList.add(new Dino("Triceratops", R.drawable.triceratops));
-        dinoArrayList.add(new Dino("Stegosaurus", R.drawable.stegosaurus));
-        dinoArrayList.add(new Dino("Utahraptor", R.drawable.raptor));
-        dinoArrayList.add(new Dino("Allosaurus", R.drawable.allosaurus));
-        dinoArrayList.add(new Dino("Parasaurolophus", R.drawable.parasaur));
-        dinoArrayList.add(new Dino("Yutyrannus", R.drawable.yutyrannus));
+        dinoArrayList.add(new Dino(dinoNames[0], R.drawable.triceratops));
+        dinoArrayList.add(new Dino(dinoNames[1], R.drawable.stegosaurus));
+        dinoArrayList.add(new Dino(dinoNames[2], R.drawable.raptor));
+        dinoArrayList.add(new Dino(dinoNames[3], R.drawable.allosaurus));
+        dinoArrayList.add(new Dino(dinoNames[4], R.drawable.parasaur));
+        dinoArrayList.add(new Dino(dinoNames[5], R.drawable.yutyrannus));
 
         // instantiate custom adapter
         DinoAdapter dinoAdapter = new DinoAdapter(this, dinoArrayList);

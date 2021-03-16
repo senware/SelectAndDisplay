@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sélectionne et Afficher</string>
+    <string name="title_activity_display">Afficher L\'Activité</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Premier Fragment</string>
+    <string name="second_fragment_label">Deuxième Fragment</string>
+    <string name="next">Suivant</string>
+    <string name="previous">Précédent</string>
+
+    <string name="hello_first_fragment">Bonjour premier fragment</string>
+    <string name="hello_second_fragment">Bonjour deuxième fragment. Arg: %1$s</string>
+
+    <string name="selectionTitle">Le Choix</string>
+    <string name="instructions">Sélectionnez un Dinosaure</string>
+
+    <string-array name="dino_string_list">
+        <item>Tricératops</item>
+        <item>Stégosaure</item>
+        <item>Utahraptor</item>
+        <item>Allosaure</item>
+        <item>Parasaurolophus</item>
+        <item>Yutyrannus</item>
+    </string-array>
+</resources>
