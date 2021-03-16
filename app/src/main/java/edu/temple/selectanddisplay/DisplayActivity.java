@@ -20,7 +20,7 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
-        getSupportActionBar().setTitle("Display");
+        getSupportActionBar().setTitle(getString(R.string.displayTitle));
 
         // point to passed information
         Intent intent = getIntent();

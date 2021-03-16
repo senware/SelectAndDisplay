@@ -11,6 +11,7 @@
     <string name="hello_second_fragment">Bonjour deuxième fragment. Arg: %1$s</string>
 
     <string name="selectionTitle">Le Choix</string>
+    <string name ="displayTitle">Afficher</string>
     <string name="instructions">Sélectionnez un Dinosaure</string>
 
     <string-array name="dino_string_list">
